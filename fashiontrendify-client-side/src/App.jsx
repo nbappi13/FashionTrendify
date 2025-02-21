@@ -1,12 +1,8 @@
-import './App.css'
+import React from 'react';
+import AppRouter from './router/Router';
 
-function App() {
+const App = () => {
+  return <AppRouter />;
+};
 
-  return (
-    <>
-      <h1>FashionTrendify</h1>
-    </>
-  )
-}
-
-export default App
+export default App;

@@ -4,10 +4,10 @@ import Home from "../pages/Home/Home";
 import Products from "../pages/Products/Products";
 import ProductDetails from "../pages/ProductDetails/ProductDetails";
 
-const router = createBrowserRouter([
+const AppRouter = createBrowserRouter([
   {
     path: "/",
-    element: <MainLayout />, // 
+    element: <MainLayout />, 
     children: [
       { path: "/", element: <Home /> },
       { path: "/products", element: <Products /> },
@@ -18,4 +18,4 @@ const router = createBrowserRouter([
   },
 ]);
 
-export default router;
+export default AppRouter;

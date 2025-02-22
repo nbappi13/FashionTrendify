@@ -1,8 +1,13 @@
-# React + Vite
+### FashionTrendify
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to Modern Trendy Fashion, a responsive e-commerce platform built with React.js
 
-Currently, two official plugins are available:
+# Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+⁕ API Integration: Fetches product data from an API using Axios.
+⁕ Dynamic Routing: Displays products in a grid and supports single-product views.
+⁕ Responsive Design: Works seamlessly on desktop, tablet, and mobile.
+⁕ Form Validation: Includes form validation for the store creation form.
+⁕ Domain Checker: Validates domain availability before creating a store.
+
+

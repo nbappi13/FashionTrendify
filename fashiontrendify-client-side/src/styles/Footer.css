@@ -1,0 +1,50 @@
+.simple-footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+  }
+  
+  .brand-header {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    border-bottom: 1px solid white;
+    padding-bottom: 10px;
+  }
+  
+  .copyright-section {
+    margin: 20px 0;
+  }
+  
+  .copyright-year {
+    margin-bottom: 15px;
+  }
+  
+  .copyright-rights {
+    margin: 0;
+  }
+  
+  .footer-links {
+    margin-top: 20px;
+    font-size: 0.9em;
+  }
+  
+  .footer-link {
+    color: #999;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
+  }
+  
+  .footer-link:hover {
+    color: #fff;
+    text-decoration: underline;
+  }

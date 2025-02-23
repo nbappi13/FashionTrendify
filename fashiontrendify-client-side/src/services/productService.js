@@ -1,18 +1,10 @@
 import axios from "axios"
 
 const API_URL = "https://glore-bd-backend-node-mongo.vercel.app/api"
-const CORS_PROXY = "https://cors-anywhere.herokuapp.com/"
-
-const api = axios.create({
-  baseURL: CORS_PROXY + API_URL,
-  headers: {
-    "X-Requested-With": "XMLHttpRequest",
-  },
-})
 
 export const fetchProducts = async () => {
   try {
-    const response = await api.get("/product")
+    const response = await axios.get(`${API_URL}/product`)
     return response.data
   } catch (error) {
     console.error("Error fetching products:", error)
@@ -22,11 +14,13 @@ export const fetchProducts = async () => {
 
 export const fetchProductDetails = async (id) => {
   try {
-    const response = await api.get(`/product/${id}`)
+  
+    const response = await axios.get(`${API_URL}/product/${id}`)
     return response.data
   } catch (error) {
     console.error("Error fetching individual product:", error)
 
+ 
     try {
       const allProductsResponse = await fetchProducts()
       const product = allProductsResponse.data.find((p) => p._id === id)
@@ -41,4 +35,3 @@ export const fetchProductDetails = async (id) => {
     }
   }
 }
-

@@ -14,6 +14,7 @@ const AppRouter = createBrowserRouter([
       { path: "/product/:id", element: <ProductDetails /> },
       { path: "/wishlist", element: <div>This is Wishlist Page</div> },
       { path: "/cart", element: <div>This is Cart Page</div> },
+      { path: "/contact", element: <div>This is Contact Page</div> },
     ],
   },
 ]);

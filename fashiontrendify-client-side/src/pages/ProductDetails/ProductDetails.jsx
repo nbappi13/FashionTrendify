@@ -15,7 +15,7 @@ const ProductDetails = () => {
     const getProductDetails = async () => {
       try {
         const data = await fetchProductDetails(id)
-        setProduct(data.data) // Adjust this based on the actual structure of your response
+        setProduct(data.data) 
       } catch (error) {
         console.error("Error fetching product details:", error)
         setError(error.message || "Failed to fetch product details")

@@ -1,32 +1,34 @@
-import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import { fetchProductDetails } from "../../services/productService";
-import "../../styles/ProductDetails.css";
+"use client"
+
+import { useEffect, useState } from "react"
+import { useParams } from "react-router-dom"
+import { fetchProductDetails } from "../../services/productService"
+import "../../styles/ProductDetails.css"
 
 const ProductDetails = () => {
-  const { id } = useParams();
-  const [product, setProduct] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const { id } = useParams()
+  const [product, setProduct] = useState(null)
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(null)
 
   useEffect(() => {
     const getProductDetails = async () => {
       try {
-        const data = await fetchProductDetails(id);
-        setProduct(data.data); 
+        const data = await fetchProductDetails(id)
+        setProduct(data.data) // Adjust this based on the actual structure of your response
       } catch (error) {
-        console.error("Error fetching product details:", error);
-        setError(error.message || "Failed to fetch product details");
+        console.error("Error fetching product details:", error)
+        setError(error.message || "Failed to fetch product details")
       } finally {
-        setLoading(false);
+        setLoading(false)
       }
-    };
+    }
 
-    getProductDetails();
-  }, [id]);
+    getProductDetails()
+  }, [id])
 
   if (loading) {
-    return <div className="loading">Loading...</div>;
+    return <div className="loading">Loading...</div>
   }
 
   if (error) {
@@ -35,7 +37,7 @@ const ProductDetails = () => {
         <h2>Error</h2>
         <p>{error}</p>
       </div>
-    );
+    )
   }
 
   if (!product) {
@@ -44,7 +46,7 @@ const ProductDetails = () => {
         <h2>Product Not Found</h2>
         <p>The requested product ID: {id} doesn't exist</p>
       </div>
-    );
+    )
   }
 
   return (
@@ -61,7 +63,8 @@ const ProductDetails = () => {
         <p className="product-details-category">Category: {product.category.name}</p>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ProductDetails;
+export default ProductDetails
+
